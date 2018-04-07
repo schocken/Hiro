@@ -41,6 +41,13 @@ public class SensorService extends Service implements SensorEventListener {
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
     }
 
+     public void onDestroy() {
+        if(mSensorManager != null) {
+            mSensorManager.unregisterListener(this);
+        }
+        super.onDestroy();
+     }
+
     @Override
     public void onSensorChanged(SensorEvent event) {
         float x = event.values[0];

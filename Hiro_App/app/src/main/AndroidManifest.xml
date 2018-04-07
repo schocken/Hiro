@@ -17,11 +17,9 @@
             </intent-filter>
         </activity>
 
-        <service
-                android:name=".SensorService"
-                android:enabled="true"
-                android:exported="true">
-        </service>
+        <service android:name=".SensorService"> </service>
+        <service android:name=".ScreenService"> </service>
+
     </application>
 
 </manifest>
